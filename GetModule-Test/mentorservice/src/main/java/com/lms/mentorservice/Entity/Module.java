@@ -18,10 +18,4 @@ public class Module {
     private String mentorId;
     private Long videoId;
     private Long menteeId;
-//    module_id SERIAL,
-//    module_name VARCHAR(100),
-//    description TEXT,
-//    mentor_id INT,
-//    video_id INT REFERENCES Video(video_id),
-//    mentee_id INT,
 }
