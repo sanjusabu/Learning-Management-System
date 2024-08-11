@@ -7,15 +7,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "module")
+@Table(name = "VideoModuleTable",uniqueConstraints=
+@UniqueConstraint(columnNames={"moduleId", "videoLink"}) )
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
-public class ModuleTable {
+public class VideoModuleTable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column(nullable = false)
     private Integer moduleId;
-    @Column(nullable = false, unique = true)
-    private String moduleName;
-    private String description;
-    private Integer mentorId;
-    private Integer menteeId;
+    @Column(nullable = false)
+    private String videoLink;
 }

@@ -8,8 +8,13 @@ public class ModuleMapper {
         moduleDto.setDescription(module.getDescription());
         moduleDto.setMentorId(module.getMentorId());
         moduleDto.setMenteeId(module.getMenteeId());
-        moduleDto.setVideoId(module.getVideoId());
         return moduleDto;
     }
-
+    public static ModuleTable mapToModule(ModuleDto moduleDto,ModuleTable module) {
+        module.setModuleName(moduleDto.getModuleName());
+        module.setDescription(moduleDto.getDescription());
+        module.setMentorId(moduleDto.getMentorId());
+        module.setMenteeId(moduleDto.getMenteeId());
+        return module;
+    }
 }
