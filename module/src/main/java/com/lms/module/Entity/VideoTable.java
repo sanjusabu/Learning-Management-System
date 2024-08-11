@@ -20,4 +20,5 @@ public class VideoTable {
     private String videoName;
     @Column(nullable = false)
     private String videoLink;
+    private String videodescription;
 }
